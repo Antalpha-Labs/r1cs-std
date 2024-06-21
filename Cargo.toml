@@ -14,10 +14,10 @@ edition = "2021"
 resolver = "2"
 
 [dependencies]
-ark-ff = { version = "0.4.0", default-features = false }
-ark-ec = { version = "0.4.0", default-features = false }
+ark-ff = { git = "https://github.com/Antalpha-Labs/algebra/" }
+ark-ec = { git = "https://github.com/Antalpha-Labs/algebra/" }
+ark-relations = { git = "https://github.com/Antalpha-Labs/snark/" }
 ark-std = { version = "0.4.0", default-features = false }
-ark-relations = { version = "0.4.0", default-features = false }
 
 derivative = { version = "2", features = ["use_core"] }
 tracing = { version = "0.1", default-features = false, features = [ "attributes" ] }
@@ -36,7 +36,7 @@ ark-mnt4-753 = { version = "0.4.0", features = ["curve"], default-features = fal
 ark-mnt6-298 = { version = "0.4.0", default-features = false  }
 ark-mnt6-753 = { version = "0.4.0", default-features = false  }
 ark-pallas = { version = "0.4.0", features = ["curve"],  default-features = false  }
-ark-bn254 = { version = "0.4.0", features = ["curve"], default-features = false  }
+ark-bn254 = { git = "https://github.com/arkworks-rs/algebra/", features = ["curve"], default-features = false }
 
 [features]
 default = ["std"]
@@ -74,12 +74,12 @@ debug-assertions = true
 debug = true
 
 [patch.crates-io]
-ark-ff = { git = "https://github.com/arkworks-rs/algebra/" }
-ark-ec = { git = "https://github.com/arkworks-rs/algebra/" }
+ark-ff = { git = "https://github.com/Antalpha-Labs/algebra/" }
+ark-ec = { git = "https://github.com/Antalpha-Labs/algebra/" }
 ark-poly = { git = "https://github.com/arkworks-rs/algebra/" }
 ark-serialize = { git = "https://github.com/arkworks-rs/algebra/" }
 ark-test-curves = { git = "https://github.com/arkworks-rs/algebra/" }
-ark-bn254 = { git = "https://github.com/arkworks-rs/curves/" }
+ark-bn254 = { git = "https://github.com/arkworks-rs/algebra/" }
 ark-bls12-377 = { git = "https://github.com/arkworks-rs/curves/" }
 ark-bls12-381 = { git = "https://github.com/arkworks-rs/curves/" }
 ark-mnt4-298 = { git = "https://github.com/arkworks-rs/curves/" }
